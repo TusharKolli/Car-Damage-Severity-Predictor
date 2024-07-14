@@ -67,7 +67,7 @@ def model_prediction_page():
 
        
         
-        model = load_model("C:/Users/Tushar/Desktop/MObile Net V2.model/MObile Net V2.model/MObile Net V2.model/MobileNet_Model_Final.keras")
+        model = load_model("MobileNet_Model_Final.keras")
    
         with st.spinner("Making prediction..."):
             prediction = predict(model, image)
