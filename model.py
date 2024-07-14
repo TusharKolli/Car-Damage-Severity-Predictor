@@ -39,16 +39,17 @@ def predict(model, image):
 
 
 
-st.title("")
 
 def main():
     st.title("Car Damage Severity Assessmnent System")
 
     
-    page = st.sidebar.selectbox("Select a page", ["Model Prediction", "About the Model"])
+    page = st.sidebar.selectbox("Select a page", ["Model Prediction", "About the Project"])
 
     if page == "Model Prediction":
         model_prediction_page()
+    elif page == "About the Project":
+        about_model_page()
 
 
 def model_prediction_page():
@@ -66,7 +67,7 @@ def model_prediction_page():
 
        
         
-        model = load_model("MobileNet_Model_Final.keras")
+        model = load_model("C:/Users/Tushar/Desktop/MObile Net V2.model/MObile Net V2.model/MObile Net V2.model/MobileNet_Model_Final.keras")
    
         with st.spinner("Making prediction..."):
             prediction = predict(model, image)
@@ -74,7 +75,54 @@ def model_prediction_page():
         st.subheader("Prediction Results")
         st.write(prediction)
 
+def about_model_page():
 
+
+    st.subheader("Overview")
+    st.write("""
+    This project aims to leverage Deep Learning techniques to assess the severity of car damage from images. The goal is to create an automated system that can quickly and accurately evaluate the extent of damage to a vehicle, assisting insurance companies, repair shops, and car owners in making informed decisions..
+    """)
+
+    st.subheader("Objectives")
+    st.write("""
+    1. **Automated Detection**: Identify and classify car damage from images.
+    2. **Severity Assessment**: Categorize damage into levels (minor, moderate, severe).
+    3. **Efficiency**: Ensure high accuracy and fast processing.
+    """)
+
+    st.subheader("Methodology")
+    st.write("""
+    - **Data Collection**: Images labeled with damage type and severity.
+    - **Preprocessing**: Resize, normalize, and augment images.
+    - **Model Development**: Use Convolutional Neural Networks (CNNs).
+    - **Training & Validation**: Train model on split dataset and evaluate performance.
+    - **Evaluation**: Use accuracy, precision, recall, and F1-score metrics.
+    """)
+
+    st.subheader("Technologies Used")
+    st.write("""
+    - **Framework**: TensorFlow/Keras or PyTorch
+    - **Language**: Python
+    - **Data Processing**: OpenCV, PIL
+    - **Evaluation**: Scikit-learn
+    """)
+
+    st.subheader("Results")
+    st.write("""
+    Achieved high accuracy in detecting and classifying car damage, providing valuable insights for the automotive and insurance industries.
+    """)
+
+    st.subheader("Future Work")
+    st.write("""
+    - **Expand Dataset**: Include more diverse images.
+    - **Real-world Application**: Integrate with industry applications.
+    - **Enhance Model**: Use advanced techniques for better performance.
+    """)
+
+    st.subheader("Conclusion")
+    st.write("""
+    This project demonstrates the potential of deep learning to automate and improve car damage assessments, saving time and resources while ensuring reliable results.
+    """)
 
 if __name__ == "__main__":
     main()
