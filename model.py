@@ -107,10 +107,7 @@ def about_model_page():
     - **Evaluation**: Scikit-learn
     """)
 
-    st.subheader("Results")
-    st.write("""
-    Achieved high accuracy in detecting and classifying car damage, providing valuable insights for the automotive and insurance industries.
-    """)
+
 
     st.subheader("Future Work")
     st.write("""
