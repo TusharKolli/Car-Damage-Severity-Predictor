@@ -10,13 +10,6 @@ This project uses Deep Learning to assess car damage severity from images, aidin
 - **Severity:** Categorize damage levels.
 - **Efficiency:** Ensure high accuracy and fast processing.
 
-## Methodology  
-1. **Data Collection:** Images with labeled damage.
-2. **Preprocessing:** Resize, normalize, augment.
-3. **Model Development:** Convolutional Neural Networks (CNNs).
-4. **Training & Validation:** Split dataset for training and evaluation.
-5. **Evaluation:** Metrics - accuracy, precision, recall, F1-score.
-
 ## Technologies  
 - **Framework:** TensorFlow/Keras or PyTorch
 - **Language:** Python
