@@ -76,8 +76,8 @@ def model_prediction_page():
         st.write(prediction)
 
 
-        st.markdown("---")
-        st.write("Developed by Kolli Tushar")
+    st.markdown("---")
+    st.write("Developed by Kolli Tushar")
 
 def about_model_page():
 
