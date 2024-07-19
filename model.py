@@ -125,7 +125,8 @@ def about_model_page():
     This project demonstrates the potential of deep learning to automate and improve car damage assessments, saving time and resources while ensuring reliable results.
     """)
     
-
+    st.markdown("---")
+    st.write("Developed by Kolli Tushar")
 
 if __name__ == "__main__":
     main()
